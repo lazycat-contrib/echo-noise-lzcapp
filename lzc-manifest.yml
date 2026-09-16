@@ -1,24 +1,16 @@
-lzc-sdk-version: "0.1"
-name: Echo Noise
-package: cloud.lazycat.app.echo-noise
-version: 0.0.1
-description: 完善的轻量说说笔记系统及memos的开源替代品
-homepage: https://github.com/rcy1314/echo-noise
-author: rcy1314
 application:
   subdomain: echo-noise
   background_task: true
   multi_instance: false
-  gpu_accel: false
-  kvm_accel: false
-  usb_accel: false
   public_path:
     - /
-  routes:
-    - /=http://echo-noise:1314/
+  upstreams:
+    - location: /
+      backend: http://echo-noise:1314/
 services:
   echo-noise:
-    image: docker.hlmirror.com/noise233/echo-noise:latest
+    # upstream: noise233/echo-noise:v3.5.5
+    image: noise233/echo-noise:v3.5.5
     environment:
       - LOG_LEVEL=info
       - DB_TYPE=sqlite

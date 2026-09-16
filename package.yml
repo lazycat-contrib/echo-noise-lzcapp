@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.echo-noise
+version: 0.0.1
+name: Echo Noise
+description: "完善的轻量说说笔记系统及memos的开源替代品"
+min_os_version: "1.5.0"
+homepage: https://github.com/rcy1314/echo-noise
+author: rcy1314
+locales:
+  zh:
+    description: "完善的轻量说说笔记系统及memos的开源替代品"
+    name: Echo Noise
+  en:
+    description: "A lightweight note system and open-source alternative to Memos"
+    name: Echo Noise
