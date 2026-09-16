@@ -10,7 +10,7 @@ application:
 services:
   echo-noise:
     # upstream: noise233/echo-noise:v3.5.5
-    image: noise233/echo-noise:v3.5.5
+    image: registry.lazycat.cloud/czyt/noise233/echo-noise:3b77b5dd19ce5051
     environment:
       - LOG_LEVEL=info
       - DB_TYPE=sqlite
@@ -18,6 +18,6 @@ services:
     binds:
       - /lzcapp/var/data:/app/data
     setup_script: |
-        if [ ! -f /app/data/noise.db ];then
-           cp -r /lzcapp/pkg/content/noise.db /app/data/noise.db
-        fi
+      if [ ! -f /app/data/noise.db ];then
+         cp -r /lzcapp/pkg/content/noise.db /app/data/noise.db
+      fi

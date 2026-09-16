@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.echo-noise
-version: 0.0.1
+version: 3.5.5
 name: Echo Noise
 description: "完善的轻量说说笔记系统及memos的开源替代品"
 min_os_version: "1.5.0"
